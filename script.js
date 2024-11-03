@@ -27,10 +27,10 @@ $(document).ready(function() {
                     $("#ul-menu > li > a").css("backgroundColor", "transparent");
                     
                     $(this).parent().addClass("hover-rainbow");
-                    
+                    $(this).css("backgroundColor", "rgba(0, 0, 0, 0.4)");
                 }
 
-                $(this).css("backgroundColor", "rgba(0, 0, 0, 0.4)");
+                
                 $("#ul-menu > li > a").not(this).parent().removeClass("hover-rainbow-background");
                 $(this).parent().addClass("active");
 
