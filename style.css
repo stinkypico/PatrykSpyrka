@@ -1,0 +1,445 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(to top left, #000000, #1a1a1a, #333333);
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background-color: transparent;
+}
+
+#header h1{
+    margin-left: 150px;
+    font-size: 60px;
+    color: white;
+}
+
+#menu{
+    float: left;
+    width: 150px;
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+
+}
+
+#stop-animation{
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    cursor: pointer;
+    background-image: url("img/locker-unlock.png");
+    background-color: transparent;
+    border: none;
+    background-size: cover;	
+    margin-bottom: 20px;
+}
+
+#content{
+    float:left;
+    width: calc(100% - 150px);
+    height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    margin-top: -40px;
+}
+
+#ul-menu{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    list-style-type: none;
+}
+#ul-menu > li{
+    position: relative;
+    width: 120px;
+    height: 50px;
+    background-color: transparent;
+    margin-top: 20px;
+    display: flex;
+}
+#ul-menu > li > a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    font-size: 18px;
+
+}
+
+#cube-box {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+#cube{
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+.cube-side{
+    transition: all 1s ease;
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 80%;
+}
+
+#top-side{
+    transform: rotateX(90deg) translateZ(150px);
+    background: linear-gradient(to top, #33FF57, #33A1FF);
+}
+
+#bottom-side{
+    transform: rotateX(90deg) translateZ(-150px);
+    background: linear-gradient(to bottom, #FF5733, #FFBD33);
+}
+
+#left-side{
+    transform: rotateY(90deg) translateZ(150px);
+    background: linear-gradient(to bottom, #FF33A1, #FF5733);
+}
+#right-side{
+    transform: rotateY(-90deg) translateZ(150px);
+    background: linear-gradient(to bottom, #33A1FF, #5733FF);
+}
+#front-side{
+    transform: rotateY(180deg) translateZ(150px);
+    background: linear-gradient(to left, #5733FF, #FF33A1);
+}
+#back-side{
+    transform: translateZ(150px);
+    background: linear-gradient(to top, #FFBD33, #33FF57);
+}
+
+
+#container{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    display: none;
+    background-color: transparent;
+}
+
+.text{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+    text-wrap: wrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    z-index: 2;
+    padding: 30px;
+    word-spacing: 10px;
+    font-size: large;
+    line-height: 30px;
+}
+
+
+
+
+@keyframes rainbow-shadow {
+    0% {
+        box-shadow: -5px 5px 10px red;
+    }
+
+    14% {
+        box-shadow: -5px 5px 10px orange;
+    }
+
+    28% {
+        box-shadow: -5px 5px 10px yellow;
+    }
+
+    42% {
+        box-shadow: -5px 5px 10px green;
+    }
+
+    57% {
+        box-shadow: -5px 5px 10px blue;
+    }
+
+    71% {
+        box-shadow: -5px 5px 10px indigo;
+    }
+
+    85% {
+        box-shadow: -5px 5px 10px violet;
+    }
+
+    100% {
+        box-shadow: -5px 5px 10px red;
+    }
+}
+
+@keyframes rotateCube {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+.hover-rainbow {
+    animation: rainbow-shadow 10s infinite;
+
+}
+
+.cube-animation{
+    animation: rotateCube 60s infinite linear;
+}
+
+@keyframes rainbow-background {
+    0% {
+        background-color: rgba(255, 0, 0,0.5);
+    }
+
+    14% {
+        background-color: rgb(255, 165, 0,0.5);
+    }
+
+    28% {
+        background-color: rgb(255, 255, 0,0.5);
+    }
+
+    42% {
+        background-color: rgb(0, 128, 0,0.5);
+    }
+
+    57% {
+        background-color: rgb(0, 0, 255,0.5);
+    }
+
+    71% {
+        background-color: rgb(75, 0, 130,0.5);
+    }
+
+    85% {
+        background-color: rgb(238, 130, 238,0.5);
+    }
+
+    100% {
+        background-color: rgb(255, 0, 0,0.5);
+       
+    }
+}
+
+.hover-rainbow-background {
+    animation: rainbow-background 10s infinite;
+}
+
+
+
+@media screen and (max-width: 1440px) {
+    #cube-box {
+        width: 200px;
+        height: 200px;
+    }
+    #cube {
+        width: 200px;
+        height: 200px;
+    }
+    .cube-side{
+        width: 200px;
+        height: 200px;
+
+    }
+    #top-side {
+        transform: rotateX(90deg) translateZ(100px);        
+    }
+    #bottom-side {
+        transform: rotateX(90deg) translateZ(-100px);
+    }
+    #left-side {
+        transform: rotateY(90deg) translateZ(100px);
+    }      
+    #right-side {
+        transform: rotateY(-90deg) translateZ(100px);   
+    }
+    #front-side {
+        transform: rotateY(180deg) translateZ(100px);
+    }
+    #back-side {
+        transform: translateZ(100px);    
+    }
+
+    #content{
+        width: calc(100% - 200px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #cube-box {
+        width: 70px;
+        height: 70px;
+        margin-top: -300px;
+    }
+
+    #cube {
+        width: 70px;
+        height: 70px;
+    }
+
+    .cube-side {
+        width: 70px;
+        height: 70px;
+
+    }
+
+    #top-side {
+        transform: rotateX(90deg) translateZ(35px);
+    }
+
+    #bottom-side {
+        transform: rotateX(90deg) translateZ(-35px);
+    }
+
+    #left-side {
+        transform: rotateY(90deg) translateZ(35px);
+    }
+
+    #right-side {
+        transform: rotateY(-90deg) translateZ(35px);
+    }
+
+    #front-side {
+        transform: rotateY(180deg) translateZ(35px);
+    }
+
+    #back-side {
+        transform: translateZ(35px);
+    }
+
+
+
+    #header{
+        display: flex;
+        height: 60px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    #header h1{
+        text-align: center;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    #menu{
+        clear: both;
+        width: 100%;
+        height: 50px;
+    }
+    #content{
+        clear: both;
+        width: 100%;
+        height: calc(100vh - 130px);
+        margin-top: 20px;
+    }
+
+    #ul-menu{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    #ul-menu li{
+        width: 80px;
+        height: 100%;
+    }
+    #ul-menu li a{
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+    }
+    #container{
+        width: 90%;
+        height: calc(100vh - 130px);
+        display: flex;
+        justify-content: center;
+    }
+
+    .text{
+        width: 100%;
+        height: calc(100vh - 155px);
+        padding: 10px;
+        word-spacing: normal;
+        font-size: small;
+        overflow-y: auto;
+        margin: 0;
+    }
+
+    body{
+        height: 100vh;
+    }
+
+    #stop-animation{
+        display: block;
+        position: fixed;
+        left: 50%;
+        bottom: 50px;
+        transform: translate(-50%);
+        z-index: 2;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+    #menu{
+        width: 100px;
+    }
+    #content{
+        width: calc(100% - 130px);
+        margin: 0;
+        margin-top: -20px;
+    }
+    #ul-menu{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #ul-menu li{
+        width: 90px;
+        margin-left: 10px;
+    }
+    #ul-menu li a{
+        width: 100%;
+        font-size: 15px;
+    }
+}

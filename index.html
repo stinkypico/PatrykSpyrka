@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header"><h1>Imię Nazwisko</h1></header>
+    <nav id="menu">
+        <ul id="ul-menu">
+            <li><a href="#" data-type="about-me">O mnie</a></li>
+            <li><a href="#" data-type="projects">Projekty</a></li>
+            <li><a href="#" data-type="contact">Kontakt</a></li>
+            <li><a href="#" data-type="skills">Umiejętności</a></li>
+        </ul>
+        <button id="stop-animation"></button>
+    </nav>
+    <article id="content">
+        <div id="cube-box">
+            <div id="cube" class="cube-animation">
+                <div class="cube-side" id="front-side">FRONT</div>
+                <div class="cube-side" id="back-side">BACK</div>
+                <div class="cube-side" id="left-side">LEFT</div>
+                <div class="cube-side" id="right-side">RIGHT</div>
+                <div class="cube-side" id="top-side">TOP</div>
+                <div class="cube-side" id="bottom-side">BOTTOM</div>
+            </div>
+        </div>
+        <div id="container">
+            <div class="text" id="text-about-me" data-type="about-me">Cześć! Nazywam się Patryk i jestem pasjonatem sportu oraz tworzenia stron internetowych. Od najmłodszych lat aktywnie
+            uczestniczę w różnych dyscyplinach sportowych, co nauczyło mnie dyscypliny, determinacji oraz pracy zespołowej. Moja
+            miłość do sportu nie tylko pozwala mi dbać o zdrowie, ale także inspiruje mnie w codziennym życiu.
+            
+            W dziedzinie technologii rozwijam swoje umiejętności w tworzeniu stron internetowych. Uwielbiam przekształcać pomysły w
+            funkcjonalne i estetyczne witryny, które są dostosowane do potrzeb użytkowników. Dzięki solidnej wiedzy na temat HTML,
+            CSS i JavaScript, potrafię tworzyć interaktywne doświadczenia, które angażują odwiedzających.
+            
+            Wierzę, że każda strona internetowa powinna być nie tylko piękna, ale także intuicyjna i łatwa w obsłudze. Dlatego stale
+            rozwijam swoje umiejętności, eksplorując nowe narzędzia i technologie, aby tworzyć jeszcze lepsze projekty.
+            
+            Poza pracą przy stronach internetowych, w wolnym czasie spędzam dużo czasu na świeżym powietrzu, grając w piłkę nożną,
+            biegnąc lub angażując się w inne formy aktywności fizycznej. Sport pozwala mi na relaks i odskocznię od codziennych
+            obowiązków, a jednocześnie pomaga mi rozwijać się jako osoba.
+            
+            Zapraszam do zapoznania się z moimi projektami i do kontaktu, jeśli masz pytania lub chcesz współpracować. Chętnie
+            podejmę się nowych wyzwań, które pozwolą mi rozwijać się zarówno w sporcie, jak i w technologii! Cześć! Nazywam się Patryk i jestem pasjonatem sportu oraz tworzenia stron internetowych. Od najmłodszych lat aktywnie
+            uczestniczę w różnych dyscyplinach sportowych, co nauczyło mnie dyscypliny, determinacji oraz pracy zespołowej. Moja
+            miłość do sportu nie tylko pozwala mi dbać o zdrowie, ale także inspiruje mnie w codziennym życiu.
+            
+            W dziedzinie technologii rozwijam swoje umiejętności w tworzeniu stron internetowych. Uwielbiam przekształcać pomysły w
+            funkcjonalne i estetyczne witryny, które są dostosowane do potrzeb użytkowników. Dzięki solidnej wiedzy na temat HTML,
+            CSS i JavaScript, potrafię tworzyć interaktywne doświadczenia, które angażują odwiedzających.
+            
+            Wierzę, że każda strona internetowa powinna być nie tylko piękna, ale także intuicyjna i łatwa w obsłudze. Dlatego stale
+            rozwijam swoje umiejętności, eksplorując nowe narzędzia i technologie, aby tworzyć jeszcze lepsze projekty.
+            
+            Poza pracą przy stronach internetowych, w wolnym czasie spędzam dużo czasu na świeżym powietrzu, grając w piłkę nożną,
+            biegnąc lub angażując się w inne formy aktywności fizycznej. Sport pozwala mi na relaks i odskocznię od codziennych
+            obowiązków, a jednocześnie pomaga mi rozwijać się jako osoba.
+            
+            Zapraszam do zapoznania się z moimi projektami i do kontaktu, jeśli masz pytania lub chcesz współpracować. Chętnie
+            podejmę się nowych wyzwań, które pozwolą mi rozwijać się zarówno w sporcie, jak i w technologii!
+        Cześć! Nazywam się Patryk i jestem pasjonatem sportu oraz tworzenia stron internetowych. Od najmłodszych lat aktywnie
+        uczestniczę w różnych dyscyplinach sportowych, co nauczyło mnie dyscypliny, determinacji oraz pracy zespołowej. Moja
+        miłość do sportu nie tylko pozwala mi dbać o zdrowie, ale także inspiruje mnie w codziennym życiu.
+        
+        W dziedzinie technologii rozwijam swoje umiejętności w tworzeniu stron internetowych. Uwielbiam przekształcać pomysły w
+        funkcjonalne i estetyczne witryny, które są dostosowane do potrzeb użytkowników. Dzięki solidnej wiedzy na temat HTML,
+        CSS i JavaScript, potrafię tworzyć interaktywne doświadczenia, które angażują odwiedzających.
+        
+        Wierzę, że każda strona internetowa powinna być nie tylko piękna, ale także intuicyjna i łatwa w obsłudze. Dlatego stale
+        rozwijam swoje umiejętności, eksplorując nowe narzędzia i technologie, aby tworzyć jeszcze lepsze projekty.
+        
+        Poza pracą przy stronach internetowych, w wolnym czasie spędzam dużo czasu na świeżym powietrzu, grając w piłkę nożną,
+        biegnąc lub angażując się w inne formy aktywności fizycznej. Sport pozwala mi na relaks i odskocznię od codziennych
+        obowiązków, a jednocześnie pomaga mi rozwijać się jako osoba.
+        
+        Zapraszam do zapoznania się z moimi projektami i do kontaktu, jeśli masz pytania lub chcesz współpracować. Chętnie
+        podejmę się nowych wyzwań, które pozwolą mi rozwijać się zarówno w sporcie, jak i w technologii!
+        Cześć! Nazywam się Patryk i jestem pasjonatem sportu oraz tworzenia stron internetowych. Od najmłodszych lat aktywnie
+        uczestniczę w różnych dyscyplinach sportowych, co nauczyło mnie dyscypliny, determinacji oraz pracy zespołowej. Moja
+        miłość do sportu nie tylko pozwala mi dbać o zdrowie, ale także inspiruje mnie w codziennym życiu.
+        
+        W dziedzinie technologii rozwijam swoje umiejętności w tworzeniu stron internetowych. Uwielbiam przekształcać pomysły w
+        funkcjonalne i estetyczne witryny, które są dostosowane do potrzeb użytkowników. Dzięki solidnej wiedzy na temat HTML,
+        CSS i JavaScript, potrafię tworzyć interaktywne doświadczenia, które angażują odwiedzających.
+        
+        Wierzę, że każda strona internetowa powinna być nie tylko piękna, ale także intuicyjna i łatwa w obsłudze. Dlatego stale
+        rozwijam swoje umiejętności, eksplorując nowe narzędzia i technologie, aby tworzyć jeszcze lepsze projekty.
+        
+        Poza pracą przy stronach internetowych, w wolnym czasie spędzam dużo czasu na świeżym powietrzu, grając w piłkę nożną,
+        biegnąc lub angażując się w inne formy aktywności fizycznej. Sport pozwala mi na relaks i odskocznię od codziennych
+        obowiązków, a jednocześnie pomaga mi rozwijać się jako osoba.
+        
+        Zapraszam do zapoznania się z moimi projektami i do kontaktu, jeśli masz pytania lub chcesz współpracować. Chętnie
+        podejmę się nowych wyzwań, które pozwolą mi rozwijać się zarówno w sporcie, jak i w technologii!
+        Cześć! Nazywam się Patryk i jestem pasjonatem sportu oraz tworzenia stron internetowych. Od najmłodszych lat aktywnie
+        uczestniczę w różnych dyscyplinach sportowych, co nauczyło mnie dyscypliny, determinacji oraz pracy zespołowej. Moja
+        miłość do sportu nie tylko pozwala mi dbać o zdrowie, ale także inspiruje mnie w codziennym życiu.
+        
+        W dziedzinie technologii rozwijam swoje umiejętności w tworzeniu stron internetowych. Uwielbiam przekształcać pomysły w
+        funkcjonalne i estetyczne witryny, które są dostosowane do potrzeb użytkowników. Dzięki solidnej wiedzy na temat HTML,
+        CSS i JavaScript, potrafię tworzyć interaktywne doświadczenia, które angażują odwiedzających.
+        
+        Wierzę, że każda strona internetowa powinna być nie tylko piękna, ale także intuicyjna i łatwa w obsłudze. Dlatego stale
+        rozwijam swoje umiejętności, eksplorując nowe narzędzia i technologie, aby tworzyć jeszcze lepsze projekty.
+        
+        Poza pracą przy stronach internetowych, w wolnym czasie spędzam dużo czasu na świeżym powietrzu, grając w piłkę nożną,
+        biegnąc lub angażując się w inne formy aktywności fizycznej. Sport pozwala mi na relaks i odskocznię od codziennych
+        obowiązków, a jednocześnie pomaga mi rozwijać się jako osoba.
+        
+        Zapraszam do zapoznania się z moimi projektami i do kontaktu, jeśli masz pytania lub chcesz współpracować. Chętnie
+        podejmę się nowych wyzwań, które pozwolą mi rozwijać się zarówno w sporcie, jak i w technologii!
+        Cześć! Nazywam się Patryk i jestem pasjonatem sportu oraz tworzenia stron internetowych. Od najmłodszych lat aktywnie
+        uczestniczę w różnych dyscyplinach sportowych, co nauczyło mnie dyscypliny, determinacji oraz pracy zespołowej. Moja
+        miłość do sportu nie tylko pozwala mi dbać o zdrowie, ale także inspiruje mnie w codziennym życiu.
+        
+        W dziedzinie technologii rozwijam swoje umiejętności w tworzeniu stron internetowych. Uwielbiam przekształcać pomysły w
+        funkcjonalne i estetyczne witryny, które są dostosowane do potrzeb użytkowników. Dzięki solidnej wiedzy na temat HTML,
+        CSS i JavaScript, potrafię tworzyć interaktywne doświadczenia, które angażują odwiedzających.
+        
+        Wierzę, że każda strona internetowa powinna być nie tylko piękna, ale także intuicyjna i łatwa w obsłudze. Dlatego stale
+        rozwijam swoje umiejętności, eksplorując nowe narzędzia i technologie, aby tworzyć jeszcze lepsze projekty.
+        
+        Poza pracą przy stronach internetowych, w wolnym czasie spędzam dużo czasu na świeżym powietrzu, grając w piłkę nożną,
+        biegnąc lub angażując się w inne formy aktywności fizycznej. Sport pozwala mi na relaks i odskocznię od codziennych
+        obowiązków, a jednocześnie pomaga mi rozwijać się jako osoba.
+        
+        Zapraszam do zapoznania się z moimi projektami i do kontaktu, jeśli masz pytania lub chcesz współpracować. Chętnie
+        podejmę się nowych wyzwań, które pozwolą mi rozwijać się zarówno w sporcie, jak i w technologii!
+        Cześć! Nazywam się Patryk i jestem pasjonatem sportu oraz tworzenia stron internetowych. Od najmłodszych lat aktywnie
+        uczestniczę w różnych dyscyplinach sportowych, co nauczyło mnie dyscypliny, determinacji oraz pracy zespołowej. Moja
+        miłość do sportu nie tylko pozwala mi dbać o zdrowie, ale także inspiruje mnie w codziennym życiu.
+        
+        W dziedzinie technologii rozwijam swoje umiejętności w tworzeniu stron internetowych. Uwielbiam przekształcać pomysły w
+        funkcjonalne i estetyczne witryny, które są dostosowane do potrzeb użytkowników. Dzięki solidnej wiedzy na temat HTML,
+        CSS i JavaScript, potrafię tworzyć interaktywne doświadczenia, które angażują odwiedzających.
+        
+        Wierzę, że każda strona internetowa powinna być nie tylko piękna, ale także intuicyjna i łatwa w obsłudze. Dlatego stale
+        rozwijam swoje umiejętności, eksplorując nowe narzędzia i technologie, aby tworzyć jeszcze lepsze projekty.
+        
+        Poza pracą przy stronach internetowych, w wolnym czasie spędzam dużo czasu na świeżym powietrzu, grając w piłkę nożną,
+        biegnąc lub angażując się w inne formy aktywności fizycznej. Sport pozwala mi na relaks i odskocznię od codziennych
+        obowiązków, a jednocześnie pomaga mi rozwijać się jako osoba.
+        
+        Zapraszam do zapoznania się z moimi projektami i do kontaktu, jeśli masz pytania lub chcesz współpracować. Chętnie
+        podejmę się nowych wyzwań, które pozwolą mi rozwijać się zarówno w sporcie, jak i w technologii!
+        </div>
+            <div class="text" id="text-projects" data-type="projects">Moje projekty... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quia labore sapiente beatae fugit. Quam libero corrupti fugiat culpa aspernatur! Minus consectetur magni itaque vero consequatur cumque possimus porro ad!</div>
+            <div class="text" id="text-contact" data-type="contact">Dane kontaktowe... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sequi quod rerum quia nostrum magnam autem, eligendi est ex quasi omnis magni tempora molestias repellendus porro perspiciatis eaque, aut quos!</div>
+            <div class="text" id="text-skills" data-type="skills">Moje umiejętności... Lorem ipsum dolor sit amet consectetur adipisicing elit. Est commodi tenetur eligendi. Maiores, rerum cumque quod deleniti facere illum eligendi hic incidunt ullam, quis distinctio corrupti saepe sed vel ipsum.</div>
+        </div>
+    </article>
+</body>
+</html>
