@@ -366,6 +366,7 @@ body{
         clear: both;
         width: 100%;
         height: 50px;
+        max-height: 50px;
     }
     #content{
         clear: both;
@@ -381,12 +382,14 @@ body{
     }
     #ul-menu li{
         width: 80px;
-        height: 100%;
+        height: 50px;
+        max-height: 50px;
     }
     #ul-menu li a{
         width: 100%;
-        height: 100%;
-        font-size: 20px;
+        height: 50px;
+        max-height: 50px;
+        font-size: 12px;
     }
     #container{
         width: 90%;
