@@ -1,93 +1,80 @@
 $(document).ready(function() {
-    $("#ul-menu > li > a").hover(function() {
+    const handleHover = function() {
         if ($(window).width() > 600) {
-            if (!$(this).parent().is(":animated") && !$(this).parent().hasClass("active")) {
-                $(this).parent().animate({top: '-15px', left: '15px'}, 100);
-                $(this).parent().addClass("hover-rainbow");
+            const parent = $(this).parent();
+            if (!parent.is(":animated") && !parent.hasClass("active")) {
+                parent.animate({top: '-15px', left: '15px'}, 100).addClass("hover-rainbow");
                 $(this).animate({"backgroundColor": "rgba(0, 0, 0, 0.4)"}, 100);
             }
         }
-    }, function() {
+    };
+
+    const handleHoverOut = function() {
         if ($(window).width() > 600) {
-            if (!$(this).parent().hasClass("active")) {
-                $(this).parent().animate({top: '0px', left: '0px'}, 100);
-                $(this).parent().removeClass("hover-rainbow");
+            const parent = $(this).parent();
+            if (!parent.hasClass("active")) {
+                parent.animate({top: '0px', left: '0px'}, 100).removeClass("hover-rainbow");
                 $(this).animate({"backgroundColor": "transparent"}, 100);
             }
         }
-    });
+    };
+
+    $("#ul-menu > li > a").hover(handleHover, handleHoverOut);
 
     $("#ul-menu > li > a").click(function(e) {
         e.preventDefault();
+        const parent = $(this).parent();
+        const isActive = parent.hasClass("active");
 
-            if (!$(this).parent().hasClass("active")) {
-                if($(window).width() > 600){
-                    $("#ul-menu > li > a").not(this).parent().removeClass("active").animate({top: '0px', left: '0px'}, 100);
-                    $("#ul-menu > li").removeClass("hover-rainbow");
-                    $("#ul-menu > li > a").css("backgroundColor", "transparent");
-                    
-                    $(this).parent().addClass("hover-rainbow");
-                    $(this).css("backgroundColor", "rgba(0, 0, 0, 0.4)");
-                }
-
-                
-                $("#ul-menu > li > a").not(this).parent().removeClass("hover-rainbow-background");
-                $(this).parent().addClass("active");
-
-                if($(window).width() <= 600){
-                    $(this).parent().addClass("hover-rainbow-background");
-                }
-                
-                
-                
-
-                let data_type = $(this).data("type");
-                
-                $("#container > div").each(function() {
-                    if ($(this).data("type") == data_type) {
-                        $(this).css("visibility", "visible");
-                    } else {
-                        $(this).css("visibility", "hidden");
-                    }
-                });
-
-                $("#container").css("display", "flex");
-
-            } else {
-                $(this).parent().removeClass("active");
-                $("#container > div").css("visibility", "hidden");
-                $("#container").css("display", "none");
-                $(this).animate({"backgroundColor": "transparent"}, 100);
-                $(this).parent().removeClass("hover-rainbow-background");
+        if (!isActive) {
+            if ($(window).width() > 600) {
+                $("#ul-menu > li.active").removeClass("active").animate({top: '0px', left: '0px'}, 100);
+                $("#ul-menu > li").removeClass("hover-rainbow");
+                $("#ul-menu > li > a").css("backgroundColor", "transparent");
+                parent.addClass("hover-rainbow");
+                $(this).css("backgroundColor", "rgba(0, 0, 0, 0.4)");
+            }else if($(window).width() <= 600){
+                $("#ul-menu > li > a").parent().removeClass("hover-rainbow-background");
+                parent.addClass("hover-rainbow-background");
             }
+
+            const data_type = $(this).data("type");
+
+            $("#container > div").css("visibility", "hidden");
+            $("#container > div[data-type='" + data_type + "']").css("visibility", "visible");
+            $("#container").css("display", "flex");
+            parent.addClass("active");
+
+        } else {
+            parent.removeClass("active");
+            $("#container > div").css("visibility", "hidden");
+            $("#container").css("display", "none");
+            $(this).animate({"backgroundColor": "transparent"}, 100);
+            parent.removeClass("hover-rainbow-background");
+        }
     });
 
     let stopGate = true;
     $("#stop-animation").click(function() {
+        stopGate = !stopGate;
         if (stopGate) {
-            stopGate = false;
-            $(this).css("backgroundImage", "url('img/locker-lock.png')");
-            $("#cube").removeClass("cube-animation");
-            console.log("locked");
-        } else {
-            stopGate = true;
             $(this).css("backgroundImage", "url('img/locker-unlock.png')");
             $("#cube").addClass("cube-animation");
-            console.log("unlocked");
+        } else {
+            $(this).css("backgroundImage", "url('img/locker-lock.png')");
+            $("#cube").removeClass("cube-animation");
         }
     });
 
     $('#cube').hover(
         function() {
-
-            let windowWidth = $(window).width();
+            const windowWidth = $(window).width();
             let widlen;
-
             if (windowWidth > 1440) {
                 widlen = 180;
             } else if (windowWidth <= 1400 && windowWidth > 425) {
                 widlen = 130;
-            } else if (windowWidth <= 425) {
+            } else {
                 widlen = 60;
             }
 
@@ -99,16 +86,14 @@ $(document).ready(function() {
             $('#back-side').css('transform', 'translateZ(' + widlen + 'px)');
         },
         function() {
-
-            let windowWidth = $(window).width();
+            const windowWidth = $(window).width();
             let widlen;
-
             if (windowWidth > 1440) {
                 widlen = 180;
             } else if (windowWidth <= 1400 && windowWidth > 425) {
                 widlen = 130;
-            } else if (windowWidth <= 425) {
-                widlen = 75; 
+            } else {
+                widlen = 75;
             }
 
             $('#top-side').css('transform', 'rotateX(90deg) translateZ(' + (widlen - 30) + 'px)');
@@ -119,5 +104,13 @@ $(document).ready(function() {
             $('#back-side').css('transform', 'translateZ(' + (widlen - 30) + 'px)');
         }
     );
-});
 
+    $(".slide-project-frame").click(function() {
+        const thisDataFrame = $(this).data("type");
+        $(".project-frame").each(function() {
+            if ($(this).data("type") === thisDataFrame) {
+                $(this).slideToggle();
+            }
+        });
+    });
+});
