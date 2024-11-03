@@ -371,7 +371,7 @@ body{
     #content{
         clear: both;
         width: 100%;
-        height: calc(100vh - 130px);
+        height: calc(100vh - 150px);
         margin-top: 20px;
     }
 
@@ -393,18 +393,19 @@ body{
     }
     #container{
         width: 90%;
-        height: calc(100vh - 130px);
+        height: calc(100vh - 150px);
         display: flex;
         justify-content: center;
     }
 
     .text{
         width: 100%;
-        height: calc(100vh - 155px);
+        height: calc(100vh - 180px);
         padding: 10px;
         word-spacing: normal;
         font-size: small;
         overflow-y: auto;
+        
         margin: 0;
     }
 
