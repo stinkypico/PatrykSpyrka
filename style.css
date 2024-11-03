@@ -305,44 +305,44 @@ body{
 
 @media screen and (max-width: 600px) {
     #cube-box {
-        width: 70px;
-        height: 70px;
+        width: 90px;
+        height: 90px;
         margin-top: -300px;
     }
 
     #cube {
-        width: 70px;
-        height: 70px;
+        width: 90px;
+        height: 90px;
     }
 
     .cube-side {
-        width: 70px;
-        height: 70px;
+        width: 90px;
+        height: 90px;
 
     }
 
     #top-side {
-        transform: rotateX(90deg) translateZ(35px);
+        transform: rotateX(90deg) translateZ(45px);
     }
 
     #bottom-side {
-        transform: rotateX(90deg) translateZ(-35px);
+        transform: rotateX(90deg) translateZ(-45px);
     }
 
     #left-side {
-        transform: rotateY(90deg) translateZ(35px);
+        transform: rotateY(90deg) translateZ(45px);
     }
 
     #right-side {
-        transform: rotateY(-90deg) translateZ(35px);
+        transform: rotateY(-90deg) translateZ(45px);
     }
 
     #front-side {
-        transform: rotateY(180deg) translateZ(35px);
+        transform: rotateY(180deg) translateZ(45px);
     }
 
     #back-side {
-        transform: translateZ(35px);
+        transform: translateZ(45px);
     }
 
 
@@ -417,7 +417,7 @@ body{
         display: block;
         position: fixed;
         left: 50%;
-        bottom: 100px;
+        bottom: 50px;
         transform: translate(-50%);
         z-index: 2;
     }
