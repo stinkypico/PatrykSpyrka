@@ -88,7 +88,7 @@ $(document).ready(function() {
             } else if (windowWidth <= 1400 && windowWidth > 425) {
                 widlen = 130;
             } else if (windowWidth <= 425) {
-                widlen = 65;
+                widlen = 60;
             }
 
             $('#top-side').css('transform', 'rotateX(90deg) translateZ(' + widlen + 'px)');
@@ -108,7 +108,7 @@ $(document).ready(function() {
             } else if (windowWidth <= 1400 && windowWidth > 425) {
                 widlen = 130;
             } else if (windowWidth <= 425) {
-                widlen = 65; 
+                widlen = 60; 
             }
 
             $('#top-side').css('transform', 'rotateX(90deg) translateZ(' + (widlen - 30) + 'px)');
@@ -120,3 +120,4 @@ $(document).ready(function() {
         }
     );
 });
+
