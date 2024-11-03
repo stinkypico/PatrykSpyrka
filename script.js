@@ -24,11 +24,15 @@ $(document).ready(function() {
                 if($(window).width() > 600){
                     $("#ul-menu > li > a").not(this).parent().removeClass("active").animate({top: '0px', left: '0px'}, 100);
                     $("#ul-menu > li").removeClass("hover-rainbow");
+                    $("#ul-menu > li > a").css("backgroundColor", "transparent");
+                    
                     $(this).parent().addClass("hover-rainbow");
+                    
                 }
 
+                $(this).css("backgroundColor", "rgba(0, 0, 0, 0.4)");
                 $("#ul-menu > li > a").not(this).parent().removeClass("hover-rainbow-background");
-                 $(this).parent().addClass("active");
+                $(this).parent().addClass("active");
 
                 if($(window).width() <= 600){
                     $(this).parent().addClass("hover-rainbow-background");
