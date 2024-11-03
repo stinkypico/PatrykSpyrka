@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -24,12 +28,12 @@
     <article id="content">
         <div id="cube-box">
             <div id="cube" class="cube-animation">
-                <div class="cube-side" id="front-side">FRONT</div>
-                <div class="cube-side" id="back-side">BACK</div>
-                <div class="cube-side" id="left-side">LEFT</div>
-                <div class="cube-side" id="right-side">RIGHT</div>
-                <div class="cube-side" id="top-side">TOP</div>
-                <div class="cube-side" id="bottom-side">BOTTOM</div>
+                <div class="cube-side" id="front-side"></div>
+                <div class="cube-side" id="back-side"></div>
+                <div class="cube-side" id="left-side"></div>
+                <div class="cube-side" id="right-side"></div>
+                <div class="cube-side" id="top-side"></div>
+                <div class="cube-side" id="bottom-side"></div>
             </div>
         </div>
         <div id="container">
@@ -49,9 +53,28 @@
             obowiązków, a jednocześnie pomaga mi rozwijać się jako osoba.
             
             Zapraszam do zapoznania się z moimi projektami i do kontaktu, jeśli masz pytania lub chcesz współpracować. Chętnie
-            podejmę się nowych wyzwań, które pozwolą mi rozwijać się zarówno w sporcie, jak i w technologii!
-        </div>
-            <div class="text" id="text-projects" data-type="projects">Moje projekty... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quia labore sapiente beatae fugit. Quam libero corrupti fugiat culpa aspernatur! Minus consectetur magni itaque vero consequatur cumque possimus porro ad!</div>
+            podejmę się nowych wyzwań, które pozwolą mi rozwijać się zarówno w sporcie, jak i w technologii!</div>
+
+            <div class="text" id="text-projects" data-type="projects">
+                <h1>Projekty</h1>
+                <p>Poniżej znajduje się lista projektów, które zrealizowałem w ramach mojej pracy oraz nauki. Każdy z nich odzwierciedla
+                moje umiejętności programistyczne, podejście do rozwiązywania problemów i dbałość o szczegóły. Projekty te obejmują
+                zarówno aplikacje internetowe, jak i narzędzia do analizy danych oraz automatyzacji procesów. Zapraszam do zapoznania
+                się z opisami i technologiami, które zostały wykorzystane przy ich tworzeniu.
+                </p>
+
+                <div id="projectsDiv">
+                    <button class="slide-project-frame" data-type="klawiatura">Pokaz Projekt "Klawiatura"</button>
+                    <div class="project-frame" data-type="klawiatura"><iframe src="https://stinkypico.github.io/project2/" width="100%" height="100%" style="border:none;"></iframe></div>
+
+                    <button class="slide-project-frame" data-type="clock">Pokaz Projekt "Zegar"></button>
+                    <div class="project-frame" data-type="clock"><iframe src="https://stinkypico.github.io/project3/" width="100%" height="100%" style="border:none;"></iframe></div>
+
+                    <button class="slide-project-frame" data-type="stickers">Pokaz Projekt "Stickers"></button>
+                    <div class="project-frame" data-type="stickers"><iframe src="https://stinkypico.github.io/project1/" width="100%" height="100%" style="border:none;"></iframe></div>
+                </div>
+
+            </div>
             <div class="text" id="text-contact" data-type="contact">Dane kontaktowe... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sequi quod rerum quia nostrum magnam autem, eligendi est ex quasi omnis magni tempora molestias repellendus porro perspiciatis eaque, aut quos!</div>
             <div class="text" id="text-skills" data-type="skills">Moje umiejętności... Lorem ipsum dolor sit amet consectetur adipisicing elit. Est commodi tenetur eligendi. Maiores, rerum cumque quod deleniti facere illum eligendi hic incidunt ullam, quis distinctio corrupti saepe sed vel ipsum.</div>
         </div>
