@@ -451,7 +451,7 @@ body{
         display: block;
         position: fixed;
         left: 50%;
-        bottom: 50px;
+        bottom: 30px;
         transform: translate(-50%);
         z-index: 2;
     }
