@@ -476,7 +476,6 @@ body{
         z-index: 2;
     }
         #copyright {
-            bottom:10px;
             font-size: x-small;
         }
 }
