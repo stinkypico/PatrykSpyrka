@@ -6,7 +6,6 @@
 
 body{
     background: linear-gradient(to top left, #000000, #1a1a1a, #333333);
-    overflow: hidden;
 }
 
 #header{
@@ -33,7 +32,19 @@ body{
     background-color: transparent;
 
 }
+#copyright{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: transparent;
+    color: white;
+    font-size: small;
 
+}
+#copyright a{
+    text-decoration: none;
+    color: white;
+}
 #stop-animation{
     width: 70px;
     height: 70px;
@@ -464,6 +475,9 @@ body{
         transform: translate(-50%);
         z-index: 2;
     }
+        #copyright {
+            font-size: x-small;
+        }
 }
 
 @media screen and (min-width: 800px) and (max-width: 1400px) {
@@ -488,5 +502,8 @@ body{
     #ul-menu li a{
         width: 100%;
         font-size: 15px;
+    }
+    #copyright{
+        font-size: smaller;
     }
 }
