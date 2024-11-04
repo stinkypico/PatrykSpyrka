@@ -75,7 +75,7 @@ $(document).ready(function() {
             }else if(windowWidth > 600 && windowWidth <= 1440){
                 widlen = 130;
             }else if(windowWidth <= 600){
-                widlen = 75;
+                widlen = 55;
             }
 
             $('#top-side').css('transform', 'rotateX(90deg) translateZ(' + widlen + 'px)');
