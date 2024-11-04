@@ -70,12 +70,12 @@ $(document).ready(function() {
         function() {
             const windowWidth = $(window).width();
             let widlen;
-            if (windowWidth > 1440) {
+            if(windowWidth > 1440){
                 widlen = 180;
-            } else if (windowWidth <= 1400 && windowWidth > 425) {
+            }else if(windowWidth > 600 && windowWidth <= 1440){
                 widlen = 130;
-            } else {
-                widlen = 60;
+            }else if(windowWidth <= 600){
+                widlen = 75;
             }
 
             $('#top-side').css('transform', 'rotateX(90deg) translateZ(' + widlen + 'px)');
@@ -88,11 +88,11 @@ $(document).ready(function() {
         function() {
             const windowWidth = $(window).width();
             let widlen;
-            if (windowWidth > 1440) {
+            if(windowWidth > 1440){
                 widlen = 180;
-            } else if (windowWidth <= 1400 && windowWidth > 425) {
+            }else if(windowWidth > 600 && windowWidth <= 1440){
                 widlen = 130;
-            } else {
+            }else if(windowWidth <= 600){
                 widlen = 75;
             }
 
